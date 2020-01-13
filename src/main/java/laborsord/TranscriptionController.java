@@ -10,8 +10,6 @@ public class TranscriptionController {
 	@MessageMapping("/transcribe")
 	@SendTo("/transcriptions/done")
 	public TranscriptionMessage forward(TranscriptionMessage message) throws Exception {
-		System.out.println("Mensaje recibido");
 		return new TranscriptionMessage(message);
 	}
-
 }

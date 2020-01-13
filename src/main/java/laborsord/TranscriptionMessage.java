@@ -30,4 +30,9 @@ public class TranscriptionMessage {
 	public void setNoPartial(String noPartial) {
 		this.noPartial = noPartial;
 	}
+
+	@Override
+	public String toString() {
+		return "{ noPartial: " + this.getNoPartial() + ", partial: " + this.getPartial() + " }";
+	}
 }
