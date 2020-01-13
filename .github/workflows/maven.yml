@@ -14,6 +14,6 @@ jobs:
       with:
         java-version: 1.8
     - name: Build with Maven
-      run: mvn clean heroku:deploy
+      run: mvn clean heroku:deploy-war
       env:
         HEROKU_API_KEY: ${{ secrets.HEROKU_API_KEY }}
