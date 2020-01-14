@@ -1,5 +1,6 @@
 package laborsord.config;
 
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.core.Ordered;
 import org.springframework.core.annotation.Order;
 import org.springframework.stereotype.Component;
@@ -13,12 +14,15 @@ import java.io.IOException;
 @Order(Ordered.HIGHEST_PRECEDENCE)
 class CorsFilter implements Filter {
 
+    @Value("${frontend.url}")
+    private String frontendUrl;
+
     @Override
     public void doFilter(ServletRequest req, ServletResponse res, FilterChain chain) throws IOException, ServletException {
         HttpServletResponse response = (HttpServletResponse) res;
         HttpServletRequest request = (HttpServletRequest) req;
         // ToDo: cambiar url por variable segun entorno
-        response.setHeader("Access-Control-Allow-Origin", "https://laborsord-frontedn.herokuapp.com");
+        response.setHeader("Access-Control-Allow-Origin", frontendUrl);
         response.setHeader("Access-Control-Allow-Credentials", "true");
         response.setHeader("Access-Control-Allow-Methods", "HEAD, GET, POST, OPTIONS, PUT, PATCH, DELETE");
         response.setHeader("Access-Control-Max-Age", "3600");
