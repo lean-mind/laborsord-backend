@@ -18,7 +18,7 @@ class CorsFilter implements Filter {
         HttpServletResponse response = (HttpServletResponse) res;
         HttpServletRequest request = (HttpServletRequest) req;
         // ToDo: cambiar url por variable segun entorno
-        response.setHeader("Access-Control-Allow-Origin", "http://laborsord-frontedn.herokuapp.com");
+        response.setHeader("Access-Control-Allow-Origin", "https://laborsord-frontedn.herokuapp.com");
         response.setHeader("Access-Control-Allow-Credentials", "true");
         response.setHeader("Access-Control-Allow-Methods", "HEAD, GET, POST, OPTIONS, PUT, PATCH, DELETE");
         response.setHeader("Access-Control-Max-Age", "3600");
