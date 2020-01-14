@@ -17,7 +17,7 @@ jobs:
         with:
           java-version: '1.8'
       - name: Set Up Maven
-        uses: stCarolas/setup-mave@v1
+        uses: stCarolas/setup-maven@v1
       - name: Deploy to Heroku
         run: mvn clean heroku:deploy
         env:
