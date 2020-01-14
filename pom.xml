@@ -69,7 +69,7 @@
                     <appName>laborsord-backend</appName>
                     <includeTarget>false</includeTarget>
                     <includes>
-                        <include>/app/target/${project.build.finalName}.jar</include>
+                        <include>${project.build.directory}/${project.build.finalName}.jar</include>
                     </includes>
                     <jdkVersion>${java.version}</jdkVersion>
                     <processTypes>
