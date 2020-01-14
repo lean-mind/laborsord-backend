@@ -1,1 +1,1 @@
-web: java -cp target/classes/:target/dependency/* laborsord.application
+web: java -cp target/classes/:target/dependency/* laborsord.Application
