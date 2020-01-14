@@ -1,1 +1,1 @@
-web: java $JAVA_OPTS Application
+web: java -cp target/classes/:target/dependency/* laborsord.application
