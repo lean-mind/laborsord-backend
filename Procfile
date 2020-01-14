@@ -1,1 +1,1 @@
-web: java $JAVA_OPTS gs-messaging-stomp-websocket
+web: java $JAVA_OPTS Application
